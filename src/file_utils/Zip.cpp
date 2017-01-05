@@ -27,8 +27,10 @@ int UnZip::ExtractFile(const char * internalPath,const char * path) {
 	unz_file_info_s * fileInfo = GetFileInfo();
 	
 	char fullPath[strlen(path) + strlen(internalPath)];
-	strcat(fullPath,GetFileName(fileInfo));
-	return Extract(fullPath,fileInfo);
+	strcat(fullPath,GetFileName(fileInfo).c_str());
+	code = Extract(fullPath,fileInfo);
+	free(fileInfo);
+	return code;
 }
 
 int UnZip::ExtractDir(const char * internalDir,const char * externalDir) {
@@ -47,15 +49,16 @@ int UnZip::ExtractDir(const char * internalDir,const char * externalDir) {
 		if(fileInfo->uncompressed_size == 0 && fileInfo->compression_method == 0)
 			continue;
 		
-		std::string zipName(GetFullFileName(fileInfo));
-		if(strncmp(zipName.c_str(),internalDir,strlen(internalDir)) == 0) {
+		std::string zipName = GetFullFileName(fileInfo);
+		if(zipName.compare(0,strlen(internalDir),internalDir) == 0) {
 			zipName.erase(0,strlen(internalDir));
 			std::string fileName(externalDir);
 			fileName += "/";
-			fileName += zipName.c_str();
+			fileName += zipName;
 			log_printf("%s\n",fileName.c_str());
 			log_printf("%i\n",Extract(fileName.c_str(),fileInfo));
 		}
+		free(fileInfo);
 	}
 	return 0;
 }
@@ -75,12 +78,12 @@ int UnZip::ExtractAll(const char * dirToExtract) {
 		unz_file_info_s * fileInfo = GetFileInfo();
 		if(fileInfo->uncompressed_size == 0 && fileInfo->compression_method == 0)
 			continue;
-		char fileName[strlen(dirToExtract)+fileInfo->size_filename];
-		strcpy(fileName,dirToExtract);
-		strcat(fileName,"/");
-		strcat(fileName,GetFullFileName(fileInfo));
+		std::string fileName(dirToExtract);
+		fileName += '/';
+		fileName += GetFullFileName(fileInfo);
 		
-		Extract(fileName,fileInfo);
+		Extract(fileName.c_str(),fileInfo);
+		free(fileInfo);
 	}
 	return 0;
 }
@@ -116,6 +119,7 @@ int UnZip::Extract(const char * path, unz_file_info_s * fileInfo) {
         }
 		unzReadCurrentFile(fileToUnzip,buffer,blocksize);
         writeBytes = write(fileNumber, buffer, blocksize);
+		log_printf("Wrote %i bytes to file.\n",writeBytes);
         if(writeBytes <= 0) {
             break;
 		}
@@ -133,6 +137,7 @@ int UnZip::Extract(const char * path, unz_file_info_s * fileInfo) {
 }
 
 int UnZip::makePath(const char * path) {
+	log_printf("%s\n",path);	
 	char correctPath[strlen(path)];
 	strcpy(correctPath,path);
 	char * pos = strrchr(correctPath, '/');
@@ -151,21 +156,28 @@ int UnZip::makePath(const char * path) {
 	return 0;
 }
 
-const char * UnZip::GetFileName(unz_file_info_s * fileInfo) {
+std::string UnZip::GetFileName(unz_file_info_s * fileInfo) {
 	char * fileName = (char*)malloc(fileInfo->size_filename);
-	strcpy(fileName,GetFullFileName(fileInfo));
+	std::string path;
+	strcpy(fileName,GetFullFileName(fileInfo).c_str());
 	char * pos = strrchr(fileName, '/');
 	if (pos != NULL) {
 		pos++;
-		return pos;
+		path = pos;
+	} else {
+		path = fileName;
 	}
-	return fileName;
+	free(fileName);
+	return path;
 }
 
-const char * UnZip::GetFullFileName(unz_file_info_s * fileInfo) {
+std::string UnZip::GetFullFileName(unz_file_info_s * fileInfo) {
 	char * filePath = (char*)malloc(fileInfo->size_filename);
 	unzGetCurrentFileInfo(fileToUnzip,NULL,filePath,fileInfo->size_filename,NULL,0,NULL,0);
-	return filePath;
+	log_printf("%s,%i\n",filePath,fileInfo->size_filename);
+	std::string path(filePath);
+	free(filePath);
+	return path;
 }
 
 unz_file_info_s * UnZip::GetFileInfo() {
