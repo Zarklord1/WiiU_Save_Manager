@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu access="777" type="complex">
+  <version length="4" type="unsignedInt">33</version>
+  <product_code length="32" type="string">WUP-P-TEST</product_code>
+  <content_platform length="32" type="string">WUP</content_platform>
+  <company_code length="8" type="string">ZZZZ</company_code>
+  <mastering_date length="32" type="string">2012-04-02 12.34.56</mastering_date>
+  <logo_type length="4" type="unsignedInt">0</logo_type>
+  <app_launch_type length="4" type="hexBinary">00000000</app_launch_type>
+  <invisible_flag length="4" type="hexBinary">00000000</invisible_flag>
+  <no_managed_flag length="4" type="hexBinary">00000000</no_managed_flag>
+  <no_event_log length="4" type="hexBinary">00000000</no_event_log>
+  <no_icon_database length="4" type="hexBinary">00000000</no_icon_database>
+  <launching_flag length="4" type="hexBinary">00000004</launching_flag>
+  <install_flag length="4" type="hexBinary">00000000</install_flag>
+  <closing_msg length="4" type="unsignedInt">0</closing_msg>
+  <title_version length="4" type="unsignedInt">0</title_version>
+  <title_id length="8" type="hexBinary">000500001FFFFF00</title_id>
+  <group_id length="4" type="hexBinary">00010000</group_id>
+  <boss_id length="8" type="hexBinary">0000000000000000</boss_id>
+  <os_version length="8" type="hexBinary">000500101000400A</os_version>
+  <app_size length="8" type="hexBinary">0000000000000000</app_size>
+  <common_save_size length="8" type="hexBinary">0000000000400000</common_save_size>
+  <account_save_size length="8" type="hexBinary">0000000000200000</account_save_size>
+  <common_boss_size length="8" type="hexBinary">0000000000000000</common_boss_size>
+  <account_boss_size length="8" type="hexBinary">0000000000000000</account_boss_size>
+  <save_no_rollback length="4" type="unsignedInt">0</save_no_rollback>
+  <join_game_id length="4" type="hexBinary">00000000</join_game_id>
+  <join_game_mode_mask length="8" type="hexBinary">0000000000000000</join_game_mode_mask>
+  <bg_daemon_enable length="4" type="unsignedInt">1</bg_daemon_enable>
+  <olv_accesskey length="4" type="unsignedInt">0</olv_accesskey>
+  <wood_tin length="4" type="unsignedInt">0</wood_tin>
+  <e_manual length="4" type="unsignedInt">0</e_manual>
+  <e_manual_version length="4" type="unsignedInt">0</e_manual_version>
+  <region length="4" type="hexBinary">FFFFFFFF</region>
+  <pc_cero length="4" type="unsignedInt">0</pc_cero>
+  <pc_esrb length="4" type="unsignedInt">0</pc_esrb>
+  <pc_bbfc length="4" type="unsignedInt">192</pc_bbfc>
+  <pc_usk length="4" type="unsignedInt">0</pc_usk>
+  <pc_pegi_gen length="4" type="unsignedInt">0</pc_pegi_gen>
+  <pc_pegi_fin length="4" type="unsignedInt">192</pc_pegi_fin>
+  <pc_pegi_prt length="4" type="unsignedInt">0</pc_pegi_prt>
+  <pc_pegi_bbfc length="4" type="unsignedInt">0</pc_pegi_bbfc>
+  <pc_cob length="4" type="unsignedInt">0</pc_cob>
+  <pc_grb length="4" type="unsignedInt">192</pc_grb>
+  <pc_cgsrr length="4" type="unsignedInt">192</pc_cgsrr>
+  <pc_oflc length="4" type="unsignedInt">0</pc_oflc>
+  <pc_reserved0 length="4" type="unsignedInt">192</pc_reserved0>
+  <pc_reserved1 length="4" type="unsignedInt">192</pc_reserved1>
+  <pc_reserved2 length="4" type="unsignedInt">192</pc_reserved2>
+  <pc_reserved3 length="4" type="unsignedInt">192</pc_reserved3>
+  <ext_dev_nunchaku length="4" type="unsignedInt">0</ext_dev_nunchaku>
+  <ext_dev_classic length="4" type="unsignedInt">0</ext_dev_classic>
+  <ext_dev_urcc length="4" type="unsignedInt">0</ext_dev_urcc>
+  <ext_dev_board length="4" type="unsignedInt">0</ext_dev_board>
+  <ext_dev_usb_keyboard length="4" type="unsignedInt">0</ext_dev_usb_keyboard>
+  <ext_dev_etc length="4" type="unsignedInt">0</ext_dev_etc>
+  <ext_dev_etc_name length="512" type="string">EtcDevice</ext_dev_etc_name>
+  <eula_version length="4" type="unsignedInt">0</eula_version>
+  <drc_use length="4" type="unsignedInt">1</drc_use>
+  <network_use length="4" type="unsignedInt">0</network_use>
+  <online_account_use length="4" type="unsignedInt">0</online_account_use>
+  <direct_boot length="4" type="unsignedInt">0</direct_boot>
+  <reserved_flag0 length="4" type="hexBinary">00000000</reserved_flag0>
+  <reserved_flag1 length="4" type="hexBinary">00000000</reserved_flag1>
+  <reserved_flag2 length="4" type="hexBinary">00000000</reserved_flag2>
+  <reserved_flag3 length="4" type="hexBinary">00000000</reserved_flag3>
+  <reserved_flag4 length="4" type="hexBinary">00000000</reserved_flag4>
+  <reserved_flag5 length="4" type="hexBinary">00000000</reserved_flag5>
+  <reserved_flag6 length="4" type="hexBinary">00000003</reserved_flag6>
+  <reserved_flag7 length="4" type="hexBinary">00000000</reserved_flag7>
+  <longname_ja length="512" type="string">Test App</longname_ja>
+  <longname_en length="512" type="string">Test App</longname_en>
+  <longname_fr length="512" type="string">Test App</longname_fr>
+  <longname_de length="512" type="string">Test App</longname_de>
+  <longname_it length="512" type="string">Test App</longname_it>
+  <longname_es length="512" type="string">Test App</longname_es>
+  <longname_zhs length="512" type="string">Test App</longname_zhs>
+  <longname_ko length="512" type="string">Test App</longname_ko>
+  <longname_nl length="512" type="string">Test App</longname_nl>
+  <longname_pt length="512" type="string">Test App</longname_pt>
+  <longname_ru length="512" type="string">Test App</longname_ru>
+  <longname_zht length="512" type="string">Test App</longname_zht>
+  <shortname_ja length="256" type="string">Test App</shortname_ja>
+  <shortname_en length="256" type="string">Test App</shortname_en>
+  <shortname_fr length="256" type="string">Test App</shortname_fr>
+  <shortname_de length="256" type="string">Test App</shortname_de>
+  <shortname_it length="256" type="string">Test App</shortname_it>
+  <shortname_es length="256" type="string">Test App</shortname_es>
+  <shortname_zhs length="256" type="string">Test App</shortname_zhs>
+  <shortname_ko length="256" type="string">Test App</shortname_ko>
+  <shortname_nl length="256" type="string">Test App</shortname_nl>
+  <shortname_pt length="256" type="string">Test App</shortname_pt>
+  <shortname_ru length="256" type="string">Test App</shortname_ru>
+  <shortname_zht length="256" type="string">Test App</shortname_zht>
+  <publisher_ja length="256" type="string">パブリッシャー名（日本）</publisher_ja>
+  <publisher_en length="256" type="string">Publisher Name (EN)</publisher_en>
+  <publisher_fr length="256" type="string">Publisher Name (FR)</publisher_fr>
+  <publisher_de length="256" type="string">Publisher Name (DE)</publisher_de>
+  <publisher_it length="256" type="string">Publisher Name (IT)</publisher_it>
+  <publisher_es length="256" type="string">Publisher Name (ES)</publisher_es>
+  <publisher_zhs length="256" type="string">Publisher Name (ZHS)</publisher_zhs>
+  <publisher_ko length="256" type="string">Publisher Name (KO)</publisher_ko>
+  <publisher_nl length="256" type="string">Publisher Name (NL)</publisher_nl>
+  <publisher_pt length="256" type="string">Publisher Name (PT)</publisher_pt>
+  <publisher_ru length="256" type="string">Publisher Name (RU)</publisher_ru>
+  <publisher_zht length="256" type="string">Publisher Name (ZHT)</publisher_zht>
+  <add_on_unique_id0 length="4" type="hexBinary">00000000</add_on_unique_id0>
+  <add_on_unique_id1 length="4" type="hexBinary">00000000</add_on_unique_id1>
+  <add_on_unique_id2 length="4" type="hexBinary">00000000</add_on_unique_id2>
+  <add_on_unique_id3 length="4" type="hexBinary">00000000</add_on_unique_id3>
+  <add_on_unique_id4 length="4" type="hexBinary">00000000</add_on_unique_id4>
+  <add_on_unique_id5 length="4" type="hexBinary">00000000</add_on_unique_id5>
+  <add_on_unique_id6 length="4" type="hexBinary">00000000</add_on_unique_id6>
+  <add_on_unique_id7 length="4" type="hexBinary">00000000</add_on_unique_id7>
+  <add_on_unique_id8 length="4" type="hexBinary">00000000</add_on_unique_id8>
+  <add_on_unique_id9 length="4" type="hexBinary">00000000</add_on_unique_id9>
+  <add_on_unique_id10 length="4" type="hexBinary">00000000</add_on_unique_id10>
+  <add_on_unique_id11 length="4" type="hexBinary">00000000</add_on_unique_id11>
+  <add_on_unique_id12 length="4" type="hexBinary">00000000</add_on_unique_id12>
+  <add_on_unique_id13 length="4" type="hexBinary">00000000</add_on_unique_id13>
+  <add_on_unique_id14 length="4" type="hexBinary">00000000</add_on_unique_id14>
+  <add_on_unique_id15 length="4" type="hexBinary">00000000</add_on_unique_id15>
+  <add_on_unique_id16 length="4" type="hexBinary">00000000</add_on_unique_id16>
+  <add_on_unique_id17 length="4" type="hexBinary">00000000</add_on_unique_id17>
+  <add_on_unique_id18 length="4" type="hexBinary">00000000</add_on_unique_id18>
+  <add_on_unique_id19 length="4" type="hexBinary">00000000</add_on_unique_id19>
+  <add_on_unique_id20 length="4" type="hexBinary">00000000</add_on_unique_id20>
+  <add_on_unique_id21 length="4" type="hexBinary">00000000</add_on_unique_id21>
+  <add_on_unique_id22 length="4" type="hexBinary">00000000</add_on_unique_id22>
+  <add_on_unique_id23 length="4" type="hexBinary">00000000</add_on_unique_id23>
+  <add_on_unique_id24 length="4" type="hexBinary">00000000</add_on_unique_id24>
+  <add_on_unique_id25 length="4" type="hexBinary">00000000</add_on_unique_id25>
+  <add_on_unique_id26 length="4" type="hexBinary">00000000</add_on_unique_id26>
+  <add_on_unique_id27 length="4" type="hexBinary">00000000</add_on_unique_id27>
+  <add_on_unique_id28 length="4" type="hexBinary">00000000</add_on_unique_id28>
+  <add_on_unique_id29 length="4" type="hexBinary">00000000</add_on_unique_id29>
+  <add_on_unique_id30 length="4" type="hexBinary">00000000</add_on_unique_id30>
+  <add_on_unique_id31 length="4" type="hexBinary">00000000</add_on_unique_id31>
+</menu>

@@ -1,0 +1,5 @@
+#pragma once
+
+#define FS_MAX_LOCALPATH_SIZE           511
+#define FS_MAX_MOUNTPATH_SIZE           128
+#define FS_MAX_FULLPATH_SIZE        	(FS_MAX_LOCALPATH_SIZE + FS_MAX_MOUNTPATH_SIZE)
