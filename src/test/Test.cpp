@@ -11,8 +11,8 @@ static bool returnScreen = false;
 
 void ZipTests() {
 	UnZip unzipFile = UnZip("sd:/test/test.zip");
-	unzipFile.ExtractDir("unique/","sd:/test/extracted/80000002");
-	unzipFile.ExtractDir("common/","sd:/test/extracted/common");
+	unzipFile.ExtractDir("unique","sd:/test/extracted/80000002");
+	unzipFile.ExtractDir("common","sd:/test/extracted/common");
 }
 
 void ScreenTests() {

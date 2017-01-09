@@ -20,7 +20,7 @@ class UnZip {
 		int ExtractDir(const char * internalDir,const char * externalDir);
 	private:
 		int Extract(const char * path, unz_file_info_s * fileInfo);
-		int makePath(const char * path);
+		//int makePath(const char * path);
 		std::string GetFileName(unz_file_info_s * fileInfo);
 		std::string GetFullFileName(unz_file_info_s * fileInfo);
 		unz_file_info_s * GetFileInfo();
