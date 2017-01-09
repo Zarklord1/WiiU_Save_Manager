@@ -1,13 +1,10 @@
 
 #include <malloc.h>
 #include <string.h>
-#include <stdio.h>
-#include <sys/stat.h>
 #include <fcntl.h>
 #include <string>
 
 #include "Zip.hpp"
-#include "common/common.h"
 #include "common/types.h"
 #include "fs_utils.h"
 
